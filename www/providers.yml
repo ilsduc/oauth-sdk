@@ -1,0 +1,25 @@
+## Facebook provider
+facebook:
+  redirect_uri: http://localhost:4000/confirm
+  authorization_url: https://www.facebook.com/v3.3/dialog/oauth?
+  access_token_url: https://graph.facebook.com/v3.3/oauth/access_token?
+  ressources_owner_url: https://graph.facebook.com/v3.3/me?fields=id,name,email&
+  response_type: code
+  scope: email
+  mapping:
+    id: id
+    name: name
+    email: email
+
+## Google provider
+google:
+  redirect_uri: http://localhost:4000/confirm
+  authorization_url: https://accounts.google.com/o/oauth2/v2/auth?
+  access_token_url: https://oauth2.googleapis.com/token?
+  ressources_owner_url: https://openidconnect.googleapis.com/v1/userinfo?
+  response_type: code
+  scope: openid%20email&
+  mapping:
+    id: id
+    name: name
+    email: email
